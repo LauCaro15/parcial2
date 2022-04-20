@@ -1,0 +1,45 @@
+###
+POST http://localhost:3000/api/v1/people/person HTTP/1.1
+Content-Type: application/json
+
+{
+  "name":"Laura Carolina",
+  "lastname":"Candamil Cortés",
+  "address":[{
+    "geo":[{
+      "lat":-6.125152,
+      "long":823923
+    }],
+    "city":"Manizales"
+  }],
+  "pets":[{
+    "pet_type":["dog","cat","rabbit"],
+    "pet_info":[{
+        "name_pet":"Motas",
+        "age_pet":1,
+        "breed":"Mini Lop"
+    }]
+  }]
+}
+
+###
+GET http://localhost:3000/api/v1/people HTTP/1.1
+###
+GET http://localhost:3000/api/v1/people/6260085eba4b676f405c1d80 HTTP/1.1
+###
+PUT http://localhost:3000/api/v1/people/6260085eba4b676f405c1d80 HTTP/1.1
+Content-Type: application/json
+
+{
+  "pets":[{
+    "pet_type":["rabbit"],
+    "pet_info":[{
+        "name_pet":"Nieve",
+        "age_pet":3,
+        "breed":"Mini Lop"
+    }]
+  }]
+}
+
+###
+DELETE http://localhost:3000/api/v1/people/6260085eba4b676f405c1d80 HTTP/1.1
